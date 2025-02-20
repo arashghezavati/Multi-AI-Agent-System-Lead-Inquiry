@@ -2,23 +2,30 @@
 ## 🔹 Overview
 This repository is part of the [**Multi-AI Agent System (MAS)**](https://github.com/arashghezavati/Multi-AI-Agent-System), specifically designed for **Lead & Inquiry Processing**.  
 
-The **Lead & Inquiry Automation System** is an **AI-powered workflow** designed to automatically process leads and customer inquiries. It is a part of the **Multi-AI Agent System (MAS)** and serves as an example of how AI agents can be used to automate business communication.
+The **Lead & Inquiry Automation System** is an **AI-powered workflow** that showcases the dynamic capabilities of the **Multi-AI Agent System (MAS)**. Upon receiving an email, the system intelligently analyzes its content and automatically switches between two specialized flows: Lead Processing or Inquiry Handling.
 
-This system **classifies incoming emails**, processes leads efficiently, scores them, and handles order-related inquiries. The AI-driven agents ensure that businesses **never miss a potential lead** and that **orders are processed intelligently**.
+The system's modular architecture allows you to easily customize each flow by adding, removing, or modifying AI agents without affecting the rest of the system. This plug-and-play approach makes it simple to adapt the workflow to your specific business needs.
 
 Using AI-driven automation, this system:  
-- 📧 **Classifies incoming emails** (Lead vs. Inquiry)  
-- 🎯 **Scores and prioritizes leads** for the sales team  
-- 🏗 **Processes orders** by checking inventory, pricing, and availability  
-- 🔗 **Sends AI-generated responses** for inquiries and orders  
+- 📧 **Smart Flow Detection** - Analyzes emails and activates the appropriate workflow (Lead or Inquiry)
+- 🎯 **Lead Processing Flow** 
+  - Evaluates and scores potential leads
+  - Prioritizes high-value opportunities
+  - Routes leads to the right sales team
+- 🏗 **Inquiry Handling Flow**
+  - Processes customer inquiries and orders
+  - Checks inventory and pricing
+  - Handles availability requests
+- 🔗 **Intelligent Responses** - Generates contextual responses based on the activated flow
 
 ---
 
 ## 🌟 Features
-✅ **Intelligent Email Processing** - Automatically detects & classifies leads vs. inquiries  
-✅ **AI-Based Lead Scoring** - Determines high-value sales opportunities  
-✅ **Automated Order Handling** - Processes orders, checks inventory, and sends responses  
-✅ **Multi-Tenant Support** - Each customer operates independently  
+✅ **Dynamic Flow Switching** - Intelligently routes emails to Lead Processing or Inquiry Handling workflows
+✅ **Modular Agent System** - Easily customize flows by adding or removing AI agents
+✅ **Lead Processing Intelligence** - Advanced scoring and prioritization of sales opportunities
+✅ **Smart Inquiry Management** - Automated handling of customer inquiries and order processing
+✅ **Multi-Tenant Architecture** - Independent operation and customization for each customer
 
 ---
 
