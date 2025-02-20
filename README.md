@@ -1,5 +1,4 @@
-# Lead & Inquiry Automation System 🚀
-
+# Lead & Inquiry Automation System (Multi-AI Agent System)
 ## 🔹 Overview
 This repository is part of the [**Multi-AI Agent System (MAS)**](https://github.com/arashghezavati/Multi-AI-Agent-System), specifically designed for **Lead & Inquiry Processing**.  
 
@@ -192,3 +191,28 @@ Admin ➝ Creates Customer in MongoDB
 4. Monitor Redis channels and logs to track the automation in action
 
 🚀 Your Multi-AI Agent System is now live! Let me know if you need any refinements!
+
+📚 Additional Resources:
+- [Multi-AI Agent System (MAS) Documentation](https://github.com/arashghezavati/Multi-AI-Agent-System/blob/main/README.md)
+- [Lead & Inquiry Automation System (LAIAS) Documentation](https://github.com/arashghezavati/Multi-AI-Agent-System/blob/main/README.md)
+
+---
+
+📝 Questions? Feel free to reach out:
+- Email: arash.ghezavati@gmail.com
+- LinkedIn: https://www.linkedin.com/in/arashghezavati/
+
+---
+
+### Copyright & License
+
+Copyright (c) 2023 Arash Ghezavati. All rights reserved.
+
+Licensed under the [MIT License](https://github.com/arashghezavati/Multi-AI-Agent-System/blob/main/LICENSE).
+
+---
+🔹 [Back to Top](#🔹-overview)
+
+
+
+
