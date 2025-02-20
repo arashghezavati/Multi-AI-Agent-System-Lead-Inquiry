@@ -200,7 +200,7 @@ Admin ➝ Creates Customer in MongoDB
 
 📝 Questions? Feel free to reach out:
 - Email: arash.ghezavati@gmail.com
-- LinkedIn: https://www.linkedin.com/in/arashghezavati/
+- LinkedIn: https://www.linkedin.com/in/arash-ghezavati/
 
 ---
 
@@ -208,11 +208,7 @@ Admin ➝ Creates Customer in MongoDB
 
 Copyright (c) 2023 Arash Ghezavati. All rights reserved.
 
-Licensed under the [MIT License](https://github.com/arashghezavati/Multi-AI-Agent-System/blob/main/LICENSE).
+Licensed under the [MIT License](LICENSE).
 
 ---
-🔹 [Back to Top](#🔹-overview)
-
-
-
-
+🔹 [Back to Top](#overview)
