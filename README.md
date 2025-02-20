@@ -51,20 +51,20 @@ For a deeper understanding of this system, check out:
 
 ## 📌 Installation & Setup
 
-### 1️⃣ **Clone the Repository**
+### 1️⃣ Clone the Repository
 ```sh
 git clone https://github.com/arashghezavati/Multi-AI-Agent-System-Lead-Inquiry.git
 cd Multi-AI-Agent-System-Lead-Inquiry
 npm install
-2️⃣ Setup: Environment Configuration
-Before running the system, you need to create an .env file in the root of the project to store important configurations.
+```
 
-Create .env File
-Inside the root directory, create a file named .env and add the following variables:
+### 2️⃣ Setup: Environment Configuration
+Before running the system, you need to create an `.env` file in the root of the project to store important configurations.
 
-ini
-Copy
-Edit
+#### Create `.env` File
+Inside the root directory, create a file named `.env` and add the following variables:
+
+```ini
 # MongoDB Connection String
 MONGODB_URI=""
 
@@ -76,40 +76,39 @@ REDIS_URL=""
 
 # Google Gemini AI API Key
 GOOGLE_GEMINI_API_KEY=""
-✅ Make sure to replace the values with actual credentials for MongoDB, Redis, and the AI system.
+```
 
-3️⃣ Set Up Redis
+### 3️⃣ Set Up Redis
 Redis is required for message-based communication between agents.
 
-Navigate to the Redis directory inside your system.
-Start the Redis server:
-sh
-Copy
-Edit
+1. Navigate to the Redis directory inside your system
+2. Start the Redis server:
+```sh
 redis-server.exe redis.windows.conf
-4️⃣ Create Database and Collections
+```
+
+### 4️⃣ Create Database and Collections
 MongoDB is required to store customers, assigned agents, and credentials.
 
-Create a new database in MongoDB.
-Create a collection named customers and add a new document:
-json
-Copy
-Edit
+1. Create a new database in MongoDB
+2. Create a collection named `customers` and add a new document:
+```json
 {
   "customer_id": "XYZ789",
   "company_name": "ABC Construction",
   "created_at": "2024-02-10T10:30:00Z"
 }
-Create another collection named customers_config to store customer-specific details, including:
-Assigned AI agents
-Business details
-Data sources (e.g., inventory database, CRM)
-Credentials (e.g., Gmail API)
-Notification settings
-Example customers_config Document
-json
-Copy
-Edit
+```
+
+3. Create another collection named `customers_config` to store customer-specific details, including:
+   - Assigned AI agents
+   - Business details
+   - Data sources (e.g., inventory database, CRM)
+   - Credentials (e.g., Gmail API)
+   - Notification settings
+
+#### Example `customers_config` Document
+```json
 {
   "_id": "CONFIG123",
   "customer_id": "XYZ789",
@@ -153,18 +152,18 @@ Edit
     }
   }
 }
-5️⃣ Start the AI System
+```
+
+### 5️⃣ Start the AI System
 Once everything is configured, you can now start the MAS agent runner.
 
-Run the AI Agents
-sh
-Copy
-Edit
+#### Run the AI Agents
+```sh
 node src/adminPanel/startAgentRunner.js --customer_id="XYZ789"
-6️⃣ How Everything Works Together (Workflow)
-plaintext
-Copy
-Edit
+```
+
+### 6️⃣ How Everything Works Together (Workflow)
+```
 Admin ➝ Creates Customer in MongoDB
        ➝ Assigns AI Agents
        ➝ Starts Agents
@@ -178,16 +177,18 @@ Admin ➝ Creates Customer in MongoDB
 📢 Redis ➝ Passes Messages to Other Agents
               ⬇
 📝 parserAgent.js ➝ Extracts Data (Next Step)
-✅ Final Summary
-✔ Each customer has independent AI agents and data.
-✔ Agents start dynamically based on assigned configurations.
-✔ Redis ensures smooth communication between AI agents.
-✔ The system is 100% multi-tenant and scalable.
+```
 
-🚀 Next Steps
-✅ Run the setup steps above
-✅ Check MongoDB collections (customers and customers_config)
-✅ Start the agent system (startAgentRunner.js)
-✅ Monitor Redis channels and logs to track the automation in action
+### ✅ Final Summary
+- ✔ Each customer has independent AI agents and data
+- ✔ Agents start dynamically based on assigned configurations
+- ✔ Redis ensures smooth communication between AI agents
+- ✔ The system is 100% multi-tenant and scalable
+
+### 🚀 Next Steps
+1. Run the setup steps above
+2. Check MongoDB collections (`customers` and `customers_config`)
+3. Start the agent system (`startAgentRunner.js`)
+4. Monitor Redis channels and logs to track the automation in action
 
 🚀 Your Multi-AI Agent System is now live! Let me know if you need any refinements!
