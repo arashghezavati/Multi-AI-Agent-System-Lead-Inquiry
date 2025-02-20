@@ -201,14 +201,3 @@ Admin ➝ Creates Customer in MongoDB
 📝 Questions? Feel free to reach out:
 - Email: arash.ghezavati@gmail.com
 - LinkedIn: https://www.linkedin.com/in/arash-ghezavati/
-
----
-
-### Copyright & License
-
-Copyright (c) 2023 Arash Ghezavati. All rights reserved.
-
-Licensed under the [MIT License](LICENSE).
-
----
-🔹 [Back to Top](#overview)
