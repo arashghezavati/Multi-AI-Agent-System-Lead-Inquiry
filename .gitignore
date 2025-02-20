@@ -1,0 +1,20 @@
+node_modules/
+.env
+logs/
+debug.log
+*.log
+
+# Moved to document-processing-service
+src/python-services/
+docs/
+src/vector-database/customer-dbs/
+src/vector-database/chromadb/
+*.pyc
+__pycache__/
+venv/
+
+# Keep only query_vector_db.js in vector-database
+
+# Word temporary files
+~$*.docx
+~*.tmp

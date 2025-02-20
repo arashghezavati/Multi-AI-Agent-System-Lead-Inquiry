@@ -1,0 +1,52 @@
+{
+  "name": "multi-ai-agent-system",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@google/generative-ai": "^0.21.0",
+    "@mui/icons-material": "^6.4.4",
+    "@mui/material": "^6.4.4",
+    "axios": "^1.7.9",
+    "cheerio": "^1.0.0",
+    "d3": "^7.9.0",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "googleapis": "^144.0.0",
+    "ioredis": "^5.5.0",
+    "lancedb": "^0.0.1",
+    "mongodb": "^6.13.0",
+    "mongoose": "^8.10.0",
+    "mysql2": "^3.12.0",
+    "node-fetch": "^3.3.2",
+    "pg": "^8.13.2",
+    "react-router-dom": "^7.1.5",
+    "readline-sync": "^1.4.10",
+    "redis": "^4.7.0",
+    "socket.io": "^4.8.1",
+    "socket.io-client": "^4.8.1",
+    "tree-kill": "^1.2.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arashghezavati/multi-ai-agent-system.git"
+  },
+  "bugs": {
+    "url": "https://github.com/arashghezavati/multi-ai-agent-system/issues"
+  },
+  "homepage": "https://github.com/arashghezavati/multi-ai-agent-system#readme",
+  "description": "",
+  "resolutions": {
+    "punycode": "^2.3.1"
+  }
+}
