@@ -17,6 +17,7 @@ Using AI-driven automation, this system:
   - Checks inventory and pricing
   - Handles availability requests
 - 🔗 **Intelligent Responses** - Generates contextual responses based on the activated flow
+![diagram-export-2-20-2025-2_53_26-PM](https://github.com/user-attachments/assets/dd6502ec-e18f-4e3a-983e-a9652a29fa45)
 
 ---
 
