@@ -1,7 +1,7 @@
 # Lead & Inquiry Automation System 🚀
 
 ## 🔹 Overview
-This repository is part of the **Multi-AI Agent System (MAS)**, specifically designed for **Lead & Inquiry Processing**.  
+This repository is part of the [**Multi-AI Agent System (MAS)**](https://github.com/arashghezavati/Multi-AI-Agent-System), specifically designed for **Lead & Inquiry Processing**.  
 
 The **Lead & Inquiry Automation System** is an **AI-powered workflow** designed to automatically process leads and customer inquiries. It is a part of the **Multi-AI Agent System (MAS)** and serves as an example of how AI agents can be used to automate business communication.
 
