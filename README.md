@@ -28,8 +28,8 @@ The system follows two main workflows:
 
 ## 📖 Documentation
 For a deeper understanding of this system, check out:
-- 📌 [MAS System Overview](https://github.com/arashghezavati/Multi-AI-Agent-System/docs/01-MAS-System-Overview.md)
-- 📌 [Agent Architecture](https://github.com/arashghezavati/Multi-AI-Agent-System/docs/02-Agent-Architecture.md)
+- 📌 [MAS System Overview](https://github.com/arashghezavati/Multi-AI-Agent-System/blob/main/docs/01-MAS-System-Overview.md)
+- 📌 [Agent Architecture](https://github.com/arashghezavati/Multi-AI-Agent-System/blob/main/docs/02-Agent-Architecture.md)
 
 ---
 
