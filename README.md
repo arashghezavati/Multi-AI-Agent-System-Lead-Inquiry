@@ -1,9 +1,25 @@
 # Lead & Inquiry Automation System 🚀
 
 ## 🔹 Overview
+This repository is part of the **Multi-AI Agent System (MAS)**, specifically designed for **Lead & Inquiry Processing**.  
+
 The **Lead & Inquiry Automation System** is an **AI-powered workflow** designed to automatically process leads and customer inquiries. It is a part of the **Multi-AI Agent System (MAS)** and serves as an example of how AI agents can be used to automate business communication.
 
 This system **classifies incoming emails**, processes leads efficiently, scores them, and handles order-related inquiries. The AI-driven agents ensure that businesses **never miss a potential lead** and that **orders are processed intelligently**.
+
+Using AI-driven automation, this system:  
+- 📧 **Classifies incoming emails** (Lead vs. Inquiry)  
+- 🎯 **Scores and prioritizes leads** for the sales team  
+- 🏗 **Processes orders** by checking inventory, pricing, and availability  
+- 🔗 **Sends AI-generated responses** for inquiries and orders  
+
+---
+
+## 🌟 Features
+✅ **Intelligent Email Processing** - Automatically detects & classifies leads vs. inquiries  
+✅ **AI-Based Lead Scoring** - Determines high-value sales opportunities  
+✅ **Automated Order Handling** - Processes orders, checks inventory, and sends responses  
+✅ **Multi-Tenant Support** - Each customer operates independently  
 
 ---
 
@@ -33,43 +49,145 @@ For a deeper understanding of this system, check out:
 
 ---
 
-## 🚀 How to Use
-1. **Clone this repository**
-   ```sh
-   git clone https://github.com/arashghezavati/Multi-AI-Agent-System-Lead-Inquiry.git
-   cd Multi-AI-Agent-System-Lead-Inquiry
-Install dependencies
-sh
-Copy
-Edit
+## 📌 Installation & Setup
+
+### 1️⃣ **Clone the Repository**
+```sh
+git clone https://github.com/arashghezavati/Multi-AI-Agent-System-Lead-Inquiry.git
+cd Multi-AI-Agent-System-Lead-Inquiry
 npm install
-Run the AI agents
+2️⃣ Setup: Environment Configuration
+Before running the system, you need to create an .env file in the root of the project to store important configurations.
+
+Create .env File
+Inside the root directory, create a file named .env and add the following variables:
+
+ini
+Copy
+Edit
+# MongoDB Connection String
+MONGODB_URI=""
+
+# API Gateway Port
+API_GATEWAY_PORT=5000
+
+# Redis Connection
+REDIS_URL=""
+
+# Google Gemini AI API Key
+GOOGLE_GEMINI_API_KEY=""
+✅ Make sure to replace the values with actual credentials for MongoDB, Redis, and the AI system.
+
+3️⃣ Set Up Redis
+Redis is required for message-based communication between agents.
+
+Navigate to the Redis directory inside your system.
+Start the Redis server:
 sh
 Copy
 Edit
-node src/startAgents.js
-🤝 Contributing
-We welcome contributions! To contribute:
+redis-server.exe redis.windows.conf
+4️⃣ Create Database and Collections
+MongoDB is required to store customers, assigned agents, and credentials.
 
-Fork the repository.
-Create a feature branch.
-Submit a pull request with your improvements.
-📜 License
-This project is licensed under the MIT License.
-
-💡 Contact
-For inquiries, reach out to [Your Contact Info].
-
-yaml
+Create a new database in MongoDB.
+Create a collection named customers and add a new document:
+json
 Copy
 Edit
+{
+  "customer_id": "XYZ789",
+  "company_name": "ABC Construction",
+  "created_at": "2024-02-10T10:30:00Z"
+}
+Create another collection named customers_config to store customer-specific details, including:
+Assigned AI agents
+Business details
+Data sources (e.g., inventory database, CRM)
+Credentials (e.g., Gmail API)
+Notification settings
+Example customers_config Document
+json
+Copy
+Edit
+{
+  "_id": "CONFIG123",
+  "customer_id": "XYZ789",
+  "business_details": {
+    "industry": "Construction",
+    "business_description": "XYZ789 supplies construction materials.",
+    "common_inquiries": "Customers usually ask about product availability, bulk pricing, and delivery times.",
+    "required_information": "To process an order, we need to extract the product name, quantity, type, delivery date, and delivery location.",
+    "customer_types": "Our customers are construction companies, contractors, and large-scale builders.",
+    "special_instructions": "Some customers may request urgent delivery or custom product specifications."
+  },
+  "assigned_agents": [
+    {
+      "agent_name": "EmailAgent",
+      "status": "active"
+    }
+  ],
+  "data_sources": {
+    "inventory": {
+      "type": "NoSQL",
+      "platform": "MongoDB",
+      "connection_string": "",
+      "inventory_source": "sale",
+      "product_field_mapping": {
+        "product_name": "product",
+        "quantity_available": "quantity",
+        "warehouse_location": "location"
+      }
+    }
+  },
+  "credentials": {
+    "gmail": {
+      "client_id": "",
+      "client_secret": "",
+      "refresh_token": ""
+    }
+  },
+  "notification_settings": {
+    "gmail": {
+      "sales_team_email": "example@gmail.com"
+    }
+  }
+}
+5️⃣ Start the AI System
+Once everything is configured, you can now start the MAS agent runner.
 
----
+Run the AI Agents
+sh
+Copy
+Edit
+node src/adminPanel/startAgentRunner.js --customer_id="XYZ789"
+6️⃣ How Everything Works Together (Workflow)
+plaintext
+Copy
+Edit
+Admin ➝ Creates Customer in MongoDB
+       ➝ Assigns AI Agents
+       ➝ Starts Agents
+              ⬇
+📂 MongoDB ➝ Stores Customers & Agents
+              ⬇
+🚀 startAgentRunner.js ➝ Starts Assigned Agents
+              ⬇
+📧 emailAgent.js ➝ Fetches Emails & Publishes to Redis
+              ⬇
+📢 Redis ➝ Passes Messages to Other Agents
+              ⬇
+📝 parserAgent.js ➝ Extracts Data (Next Step)
+✅ Final Summary
+✔ Each customer has independent AI agents and data.
+✔ Agents start dynamically based on assigned configurations.
+✔ Redis ensures smooth communication between AI agents.
+✔ The system is 100% multi-tenant and scalable.
 
-### **✅ Next Steps**
-1. **Copy this into `README.md` inside `Multi-AI-Agent-System-Lead-Inquiry`**.
-2. **Commit and push it** to GitHub:
-   ```sh
-   git add README.md
-   git commit -m "Added README for Lead-Inquiry Automation"
-   git push origin main
+🚀 Next Steps
+✅ Run the setup steps above
+✅ Check MongoDB collections (customers and customers_config)
+✅ Start the agent system (startAgentRunner.js)
+✅ Monitor Redis channels and logs to track the automation in action
+
+🚀 Your Multi-AI Agent System is now live! Let me know if you need any refinements!
